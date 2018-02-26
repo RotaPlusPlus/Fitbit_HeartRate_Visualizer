@@ -55,5 +55,9 @@ DATE = "2018-02-26"
 # ID等の設定
 authd_client = fitbit.Fitbit(CLIENT_ID, CLIENT_SECRET,access_token=ACCESS_TOKEN, refresh_token=REFRESH_TOKEN, refresh_cb = updateToken)
 
-steps = authd_client.intraday_time_series('activities/steps', base_date=DATE, detail_level='1min', start_time="15:00", end_time="16:00")
-print(steps)
+data_sec = authd_client.intraday_time_series('activities/steps', DATE, detail_level='1min',  start_time="15:45", end_time="16:00")
+steps_sec = data_sec["activities-steps-intraday"]["dataset"]
+
+steps_df = pd.DataFrame.from_dict(steps_sec)
+steps_df.index = pd.to_datetime([DATE + " " + t for t in steps_df.time])
+print(steps_df[:100])

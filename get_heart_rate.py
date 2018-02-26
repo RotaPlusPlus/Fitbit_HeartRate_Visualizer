@@ -56,6 +56,10 @@ DATE = "2018-02-26"
 # ID等の設定
 authd_client = fitbit.Fitbit(CLIENT_ID, CLIENT_SECRET,access_token=ACCESS_TOKEN, refresh_token=REFRESH_TOKEN, refresh_cb = updateToken)
 
-data_sec = authd_client.intraday_time_series('activities/heart', DATE, detail_level='1sec') #'1sec', '1min', or '15min'
+data_sec = authd_client.intraday_time_series('activities/heart', DATE, detail_level='1sec',start_time="15:45", end_time="16:00") #'1sec', '1min', or '15min'
 heart_sec = data_sec["activities-heart-intraday"]["dataset"]
-print(heart_sec[:10])
+
+heart_df = pd.DataFrame.from_dict(heart_sec)
+heart_df.index = pd.to_datetime([DATE + " " + t for t in heart_df.time])
+heart_df = heart_df.drop("time", axis=1)
+print(heart_df[:100])
