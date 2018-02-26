@@ -39,9 +39,8 @@ print("REFRESH_TOKEN = {0}".format(REFRESH_TOKEN))
 DATE = "2018-02-26"
 
 # ID等の設定
-authd_client = fitbit.Fitbit(CLIENT_ID, CLIENT_SECRET
-                             ,access_token=ACCESS_TOKEN, refresh_token=REFRESH_TOKEN)
-# 心拍数を取得（1秒単位）
+authd_client = fitbit.Fitbit(CLIENT_ID, CLIENT_SECRET,access_token=ACCESS_TOKEN, refresh_token=REFRESH_TOKEN)
+
 data_sec = authd_client.intraday_time_series('activities/heart', DATE, detail_level='1sec') #'1sec', '1min', or '15min'
 heart_sec = data_sec["activities-heart-intraday"]["dataset"]
-heart_sec[:10]
+print(heart_sec[:10])
