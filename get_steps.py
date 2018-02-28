@@ -3,10 +3,11 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
-# %matplotlib inline
 
 from ast import literal_eval
 
+import datetime
+import time
 
 TOKEN_FILE  = "tokens.token"
 def updateToken(token):
@@ -38,7 +39,7 @@ with open("access.token", "r") as f:  #token fileの読み込み
             CLIENT_SECRET = split_list[2]
 
 # Refresh Token に関しては8時間しか有効でないので常に更新
-tokens = open(TOKEN_FILE).read() 
+tokens = open(TOKEN_FILE).read()
 token_dict = literal_eval(tokens)
 # access_token = token_dict['access_token']
 REFRESH_TOKEN = token_dict['refresh_token']
