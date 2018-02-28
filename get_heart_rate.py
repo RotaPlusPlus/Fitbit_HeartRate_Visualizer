@@ -6,9 +6,15 @@ import numpy as np
 
 from ast import literal_eval
 
+# 更新時間管理など
 import datetime
 import time
 
+# Ctrl+Cで終了時の処理のため
+import signal
+import sys
+
+# モジュール変数の定義
 import config
 
 # 用いるTokenについて
@@ -22,6 +28,13 @@ REFRESH_TOKEN = ""
 # 取得したい日付(今日に設定) e.g. "2018-02-26"
 DATE = datetime.datetime.now().strftime( '%Y-%m-%d' )
 print(DATE)
+
+# Ctrl+Cで終了時の処理
+def handler(signal, frame):
+        print('Exit with Ctrl+C / Opend File Closed')
+        config.output_file.close()
+        sys.exit(0)
+
 
 # request token file が更新されるのでそれのupdater
 def updateToken(token):
@@ -83,15 +96,16 @@ def task(authd_client, start_time="16:15", end_time="16:40",  output_file=None):
     update_time = str(heart_df[-2:-1]["time"].get_values())
 
     # DEBUG
-    print(update_time)
+    print("update_time: " + update_time)
 
     # 現在のFitbit更新時刻がファイル書き出し最終更新時刻と違う場合にファイル書き出し
     if(update_time != config.last_update_time):
         latest_heart_rate = str(int(heart_df["value"][-2:-1]))
-        print(latest_heart_rate)
-        output_file.write(latest_heart_rate+"\n")
+        # ファイル書き出し
+        config.output_file.write(latest_heart_rate+"\n")
 
         # DEBUG
+        print("=== new updated value ===")
         print(heart_df[-2:-1])
 
         # ファイル書き出し最終更新時刻を更新
@@ -101,19 +115,27 @@ def task(authd_client, start_time="16:15", end_time="16:40",  output_file=None):
 # updated_time = time.asctime().split(" ")[3]
 def get_updated_time():
     now = datetime.datetime.now()
-    updated_now = now + datetime.timedelta(minutes=-220)
+    updated_now = now + datetime.timedelta(minutes=-320)
     updated_time = updated_now.strftime('%H:%M:%S')
-    old_now = now + datetime.timedelta(minutes=-280)
+    old_now = now + datetime.timedelta(minutes=-380)
     old_time = old_now.strftime('%H:%M:%S')
     return old_time, updated_time
 
-# いろんな初期化を行う
-client = init()
 
-output_file = open('heart_rate.txt', mode = 'a', encoding = 'utf-8')
+# メインここから
+if __name__ == '__main__':
 
-# main loop
-while True:
-    old_time, updated_time = get_updated_time()
-    task(client, old_time, updated_time, output_file)
-    time.sleep(2)
+    # Ctrl+C終了時のイベント検知
+    signal.signal(signal.SIGINT, handler)
+
+    # いろんな初期化を行う
+    client = init()
+
+    # 心拍数書き込みFileをopen
+    config.output_file = open('heart_rate.txt', mode = 'a', encoding = 'utf-8')
+
+    # main loop
+    while True:
+        old_time, updated_time = get_updated_time()
+        task(client, old_time, updated_time, config.output_file)
+        time.sleep(1)
