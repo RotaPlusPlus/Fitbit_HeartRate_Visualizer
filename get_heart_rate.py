@@ -9,6 +9,8 @@ from ast import literal_eval
 import datetime
 import time
 
+import config
+
 # 用いるTokenについて
 TOKEN_FILE  = "tokens.token"
 ACCESS_TOKEN_FILE = "access.token"
@@ -17,10 +19,9 @@ CLIENT_SECRET = ""
 ACCESS_TOKEN = ""
 REFRESH_TOKEN = ""
 
-# 取得したい日付(今日に設定)
+# 取得したい日付(今日に設定) e.g. "2018-02-26"
 DATE = datetime.datetime.now().strftime( '%Y-%m-%d' )
 print(DATE)
-# DATE = "2018-02-26"
 
 # request token file が更新されるのでそれのupdater
 def updateToken(token):
@@ -70,30 +71,49 @@ def init():
     return authd_client
 
 # 繰り返すタスク
-def task(authd_client, start_time="16:15", end_time="16:40"):
+def task(authd_client, start_time="16:15", end_time="16:40",  output_file=None):
     data_sec = authd_client.intraday_time_series('activities/heart', DATE, detail_level='1sec',start_time=start_time, end_time=end_time) #'1sec', '1min', or '15min'
     heart_sec = data_sec["activities-heart-intraday"]["dataset"]
 
+    # 取得データをDataFrameに変換
     heart_df = pd.DataFrame.from_dict(heart_sec)
     heart_df.index = pd.to_datetime([DATE + " " + t for t in heart_df.time])
-    heart_df = heart_df.drop("time", axis=1)
-    print(heart_df[-2:-1])
+
+    # 現在のFitbit更新時刻取得
+    update_time = str(heart_df[-2:-1]["time"].get_values())
+
+    # DEBUG
+    print(update_time)
+
+    # 現在のFitbit更新時刻がファイル書き出し最終更新時刻と違う場合にファイル書き出し
+    if(update_time != config.last_update_time):
+        latest_heart_rate = str(int(heart_df["value"][-2:-1]))
+        print(latest_heart_rate)
+        output_file.write(latest_heart_rate+"\n")
+
+        # DEBUG
+        print(heart_df[-2:-1])
+
+        # ファイル書き出し最終更新時刻を更新
+        config.last_update_time = str(heart_df[-2:-1]["time"].get_values())
 
 # 現在時刻が何秒更新されたか測定する関数
+# updated_time = time.asctime().split(" ")[3]
 def get_updated_time():
-    # updated_time = time.asctime().split(" ")[3]
     now = datetime.datetime.now()
-    updated_now = now + datetime.timedelta(minutes=-120)
+    updated_now = now + datetime.timedelta(minutes=-220)
     updated_time = updated_now.strftime('%H:%M:%S')
-    old_now = now + datetime.timedelta(minutes=-180)
+    old_now = now + datetime.timedelta(minutes=-280)
     old_time = old_now.strftime('%H:%M:%S')
     return old_time, updated_time
 
 # いろんな初期化を行う
 client = init()
 
+output_file = open('heart_rate.txt', mode = 'a', encoding = 'utf-8')
+
 # main loop
 while True:
     old_time, updated_time = get_updated_time()
-    task(client, old_time, updated_time)
+    task(client, old_time, updated_time, output_file)
     time.sleep(2)
