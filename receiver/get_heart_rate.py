@@ -124,6 +124,8 @@ def task(authd_client, start_time="16:15", end_time="16:40", osc_client=None):
         # OSCでメッセージ送信
         msg = osc_message_builder.OscMessageBuilder(address="/data")
         msg.add_arg(int(latest_heart_rate))
+        update_time = str(time.asctime().split(" ")[4])
+        msg.add_arg(update_time)
         msg = msg.build()
         osc_client.send(msg)
 
@@ -138,9 +140,9 @@ def task(authd_client, start_time="16:15", end_time="16:40", osc_client=None):
 # updated_time = time.asctime().split(" ")[3]
 def get_updated_time():
     now = datetime.datetime.now()
-    updated_now = now + datetime.timedelta(minutes=-30)
+    updated_now = now + datetime.timedelta(minutes=-200)
     updated_time = updated_now.strftime('%H:%M:%S')
-    old_now = now + datetime.timedelta(minutes=-60)
+    old_now = now + datetime.timedelta(minutes=-260)
     old_time = old_now.strftime('%H:%M:%S')
     return old_time, updated_time
 
