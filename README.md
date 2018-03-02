@@ -1,6 +1,16 @@
 # Fitbit_HeartRate_Visualizer
+This repository contains servers and visualizers.
 
-## For Debug (avoid HTTP Too Many Requests)
+## Visualizer
+It is currently under development as a sample in another repository.
+https://github.com/Hiroki11x/openFrameworksSample/tree/master/oscReceiver
+
+## Receiver
+Server sequentially acquire heart rate data from fitbit on the python server and send it to openFrameworks project in OSC.
+OSC transmission server for virtual data for debugging is also prepared.
+
+
+#### For Debug (avoid HTTP Too Many Requests)
 use
 https://github.com/RotaPlusPlus/Fitbit_HeartRate_Visualizer/blob/master/sandbox/osc_sender_sample.py
 
@@ -13,7 +23,7 @@ $ python osc_sender_sample.py
 then, type some integer.
 the integer you input will be sent via OSC
 
-## For Release
+#### For Release
 use
 https://github.com/RotaPlusPlus/Fitbit_HeartRate_Visualizer/blob/master/receiver/get_heart_rate.py
 
@@ -24,3 +34,6 @@ $ python get_heart_rate.py
 ```
 
 Automatically, the heart rate acquired from fitbit as time series data is transmitted by OSC
+
+## License
+MIT
