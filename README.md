@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # Fitbit_HeartRate_Visualizer
 This repository contains servers and visualizers.
 
