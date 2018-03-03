@@ -1,5 +1,5 @@
 import argparse
-
+from numpy.random import *
 import time
 
 from pythonosc import osc_message_builder
@@ -20,16 +20,16 @@ client = udp_client.UDPClient(args.ip, args.port)
 print("ip:127.0.0.1, port:" + str(port_num) + ", address:/data")
 
 def main():
-  print("type int:")
-  input_str = int(input())
+  heart_rate = randint(85,100)
   update_time = str(time.asctime().split(" ")[4])
   msg = osc_message_builder.OscMessageBuilder(address="/data")
-  msg.add_arg(input_str)
+  msg.add_arg(heart_rate)
   msg.add_arg(update_time)
-  print(update_time)
+  print("[{0}]  heart_rate : {1}".format(update_time,heart_rate))
   msg = msg.build()
   client.send(msg)
 
 if __name__ == "__main__":
   while True:
     main()
+    time.sleep(2)
