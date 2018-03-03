@@ -4,8 +4,38 @@
 This repository contains servers and visualizers.
 
 ## Visualizer
-It is currently under development as a sample in another repository.
-https://github.com/Hiroki11x/openFrameworksSample/tree/master/oscReceiver
+https://github.com/RotaPlusPlus/Fitbit_HeartRate_Visualizer/tree/master/oscReceiver
+
+```bash
+├── Makefile
+├── Project.xcconfig
+├── bin
+│   ├── data
+│   └── oscReceiverDebug.app
+├── manager
+│   ├── FontManager.cpp
+│   ├── FontManager.hpp
+│   ├── MacroManager.cpp
+│   ├── MacroManager.hpp
+│   ├── OSCManager.cpp
+│   └── OSCManager.hpp
+├── model
+│   ├── HeartRate.cpp
+│   └── HeartRate.hpp
+├── openFrameworks-Info.plist
+├── oscReceiver.xcodeproj
+│   ├── project.pbxproj
+│   ├── project.xcworkspace
+│   ├── xcshareddata
+│   └── xcuserdata
+├── src
+│   ├── main.cpp
+│   ├── ofApp.cpp
+│   └── ofApp.h
+└── view
+    ├── ElectroCardiogramView.cpp
+    └── ElectroCardiogramView.hpp
+```
 
 ## Receiver
 Server sequentially acquire heart rate data from fitbit on the python server and send it to openFrameworks project in OSC.
