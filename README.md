@@ -32,7 +32,6 @@ https://github.com/RotaPlusPlus/Fitbit_HeartRate_Visualizer/tree/master/oscRecei
 │   ├── main.cpp
 │   ├── ofApp.cpp
 │   └── ofApp.h
-
 +└── view
 +    ├── CardiogramBackgroundView.cpp
 +    ├── CardiogramBackgroundView.hpp
