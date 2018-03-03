@@ -6,6 +6,8 @@
 #include "ElectroCardiogramView.hpp"
 #include "CardiogramBackgroundView.hpp"
 
+#include "LogViewModule.hpp"
+
 class ofApp : public ofBaseApp{
 
 	public:
@@ -27,5 +29,5 @@ class ofApp : public ofBaseApp{
 
     ElectroCardiogramView mElectroCardiogramView;
     CardiogramBackgroundView mCardiogramBackgroundView;
-		
+    LogViewModule mLogViewModule;
 };
