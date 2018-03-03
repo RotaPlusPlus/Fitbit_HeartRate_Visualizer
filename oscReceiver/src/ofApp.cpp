@@ -5,8 +5,11 @@ void ofApp::setup(){
     OSCManager::setup();
     FontManager::init();
     HeartRate::init();
+
+    mLogViewModule.init();
     mCardiogramBackgroundView.init();
     mElectroCardiogramView.init();
+
 }
 
 //--------------------------------------------------------------
@@ -19,7 +22,7 @@ void ofApp::update(){
 //--------------------------------------------------------------
 void ofApp::draw(){
     OSCManager::draw();
-    mCardiogramBackgroundView.draw();
+//    mCardiogramBackgroundView.draw();
     mElectroCardiogramView.draw();
 }
 

@@ -8,19 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		0546D1A38E13BD319CC9755B /* OscReceivedElements.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9BF3AA0D4FAA89D0F8A0E545 /* OscReceivedElements.cpp */; };
-		1320749B8FF5BD6ABE1D5763 /* OSCManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A5EB1B6F04EE1663C90B8D6 /* OSCManager.cpp */; };
-		25AA658220490232003AA72C /* ofxPostGlitch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25AA658020490232003AA72C /* ofxPostGlitch.cpp */; };
 		4ADB88E2FB52E76A471065DE /* ofxOscParameterSync.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0AED834CE4DEC5260AF302A2 /* ofxOscParameterSync.cpp */; };
-		4EA16089204A90C900150D22 /* CardiogramBackgroundView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4EA16087204A90C900150D22 /* CardiogramBackgroundView.cpp */; };
-		4EEC98442047DFC30004AB41 /* HeartRate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4EEC98422047DFC30004AB41 /* HeartRate.cpp */; };
-		4EEC984B2047E6180004AB41 /* ElectroCardiogramView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4EEC98492047E6180004AB41 /* ElectroCardiogramView.cpp */; };
+		4ECAE52D204AD4C9002AF1D1 /* OSCManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4ECAE51F204AD4C9002AF1D1 /* OSCManager.cpp */; };
+		4ECAE52E204AD4C9002AF1D1 /* MacroManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4ECAE520204AD4C9002AF1D1 /* MacroManager.cpp */; };
+		4ECAE52F204AD4C9002AF1D1 /* FontManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4ECAE521204AD4C9002AF1D1 /* FontManager.cpp */; };
+		4ECAE530204AD4CA002AF1D1 /* CardiogramBackgroundView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4ECAE523204AD4C9002AF1D1 /* CardiogramBackgroundView.cpp */; };
+		4ECAE531204AD4CA002AF1D1 /* LogViewModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4ECAE524204AD4C9002AF1D1 /* LogViewModule.cpp */; };
+		4ECAE532204AD4CA002AF1D1 /* ElectroCardiogramView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4ECAE526204AD4C9002AF1D1 /* ElectroCardiogramView.cpp */; };
+		4ECAE533204AD4CA002AF1D1 /* HeartRate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4ECAE52B204AD4C9002AF1D1 /* HeartRate.cpp */; };
 		510CAFE035E576A4E1502D52 /* UdpSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6DEF695B88BA5FAACEAA937 /* UdpSocket.cpp */; };
 		5864AD82E20F15536D054EA3 /* ofxOscMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF49D76C45D5DB505A234880 /* ofxOscMessage.cpp */; };
 		62545D179C94265CA1389D4A /* OscOutboundPacketStream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63A47AC60FFAFC3BF093EC0F /* OscOutboundPacketStream.cpp */; };
 		640279EE111671BD026CB013 /* ofxOscReceiver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C2FAC65C491D4231379F3298 /* ofxOscReceiver.cpp */; };
 		67FE4C7B15C2F0478C8126C2 /* NetworkingUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3B361208CD4107E479F04E7B /* NetworkingUtils.cpp */; };
 		72A929D3561B8232A182ABFC /* ofxOscBundle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65EEFA3DA3526E9CDD9C21F9 /* ofxOscBundle.cpp */; };
-		7523260FAA0C4B1857427E6E /* FontManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 391D24D5CA9373019FCB1F2C /* FontManager.cpp */; };
+		73B2CB7812D8C0CD20B781C3 /* ofxSuperLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C0D7BFAFC52551BAB93FAAFF /* ofxSuperLog.cpp */; };
 		879A251454401BC0B6E4F238 /* OscTypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D9BFFBBF4CC43DEE890B3C3E /* OscTypes.cpp */; };
 		8F5205AEF8861EF234F0651A /* ofxOscSender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 81967292BFC87A0144BD32C6 /* ofxOscSender.cpp */; };
 		ADE367465D2A8EBAD4C7A8D9 /* IpEndpointName.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADD194746185E2DA11468377 /* IpEndpointName.cpp */; };
@@ -28,7 +30,8 @@
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
 		E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
-		EBAF3F35ABD0775A0E9F9771 /* MacroManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 95127D5191B4A86C5D719C2F /* MacroManager.cpp */; };
+		E65F6DE61327E53A2EA252C8 /* ofxSuperLogDisplay.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD6A4FBCEEE86DE950D287F /* ofxSuperLogDisplay.cpp */; };
+		F6E7D6C01B3F2E112EB0533D /* ofxPostGlitch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 40C409F696FE990F95E1B9D3 /* ofxPostGlitch.cpp */; };
 		F8EE25F765782ABAC54C8E81 /* ofxTrueTypeFontUL2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CD998440951DD725C41457D0 /* ofxTrueTypeFontUL2.cpp */; };
 /* End PBXBuildFile section */
 
@@ -71,39 +74,45 @@
 		20F35AFADAF0068B067E713F /* OscReceivedElements.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscReceivedElements.h; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.h; sourceTree = SOURCE_ROOT; };
 		23640F57DF6C4BB6BFC5DA4C /* PacketListener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = PacketListener.h; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/PacketListener.h; sourceTree = SOURCE_ROOT; };
 		2495ADD74220D1D5BA27E7EF /* hb-common.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = "hb-common.h"; path = "../../../addons/ofxTrueTypeFontUL2/libs/harfbuzz/include/hb-common.h"; sourceTree = SOURCE_ROOT; };
-		25AA658020490232003AA72C /* ofxPostGlitch.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ofxPostGlitch.cpp; path = ../../../addons/ofxPostGlitch/src/ofxPostGlitch.cpp; sourceTree = "<group>"; };
-		25AA658120490232003AA72C /* ofxPostGlitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ofxPostGlitch.h; path = ../../../addons/ofxPostGlitch/src/ofxPostGlitch.h; sourceTree = "<group>"; };
 		2763B0A91C02D5388C62DC0A /* hb-font.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = "hb-font.h"; path = "../../../addons/ofxTrueTypeFontUL2/libs/harfbuzz/include/hb-font.h"; sourceTree = SOURCE_ROOT; };
 		2ABB6282FF41F505D8BFEB28 /* hb-shape-plan.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = "hb-shape-plan.h"; path = "../../../addons/ofxTrueTypeFontUL2/libs/harfbuzz/include/hb-shape-plan.h"; sourceTree = SOURCE_ROOT; };
 		2C85B128913A3D7C1FDDAE6B /* hb-ot-tag.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = "hb-ot-tag.h"; path = "../../../addons/ofxTrueTypeFontUL2/libs/harfbuzz/include/hb-ot-tag.h"; sourceTree = SOURCE_ROOT; };
 		2D5948ECCE531AE25BE5E03B /* hb-shape.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = "hb-shape.h"; path = "../../../addons/ofxTrueTypeFontUL2/libs/harfbuzz/include/hb-shape.h"; sourceTree = SOURCE_ROOT; };
 		2FD4B0329909D3527F003494 /* UdpSocket.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = UdpSocket.h; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/UdpSocket.h; sourceTree = SOURCE_ROOT; };
-		391D24D5CA9373019FCB1F2C /* FontManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = FontManager.cpp; path = manager/FontManager.cpp; sourceTree = SOURCE_ROOT; };
 		3B361208CD4107E479F04E7B /* NetworkingUtils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = NetworkingUtils.cpp; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/posix/NetworkingUtils.cpp; sourceTree = SOURCE_ROOT; };
+		40C409F696FE990F95E1B9D3 /* ofxPostGlitch.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxPostGlitch.cpp; path = ../../../addons/ofxPostGlitch/src/ofxPostGlitch.cpp; sourceTree = SOURCE_ROOT; };
+		4376D8726B405E8BDF38549A /* ofxSuperLogDisplay.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSuperLogDisplay.h; path = ../../../addons/ofxSuperLog/src/ofxSuperLogDisplay.h; sourceTree = SOURCE_ROOT; };
 		444657A12E59D0ED86981498 /* TimerListener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = TimerListener.h; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/TimerListener.h; sourceTree = SOURCE_ROOT; };
 		48974F980F51769171D0B2F5 /* IpEndpointName.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = IpEndpointName.h; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/IpEndpointName.h; sourceTree = SOURCE_ROOT; };
 		4E95FB446A9C9C6F0DE12D75 /* OscPrintReceivedElements.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscPrintReceivedElements.h; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscPrintReceivedElements.h; sourceTree = SOURCE_ROOT; };
-		4EA16087204A90C900150D22 /* CardiogramBackgroundView.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CardiogramBackgroundView.cpp; sourceTree = "<group>"; };
-		4EA16088204A90C900150D22 /* CardiogramBackgroundView.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CardiogramBackgroundView.hpp; sourceTree = "<group>"; };
-		4EEC98422047DFC30004AB41 /* HeartRate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HeartRate.cpp; sourceTree = "<group>"; };
-		4EEC98432047DFC30004AB41 /* HeartRate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HeartRate.hpp; sourceTree = "<group>"; };
-		4EEC98492047E6180004AB41 /* ElectroCardiogramView.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ElectroCardiogramView.cpp; path = view/ElectroCardiogramView.cpp; sourceTree = SOURCE_ROOT; };
-		4EEC984A2047E6180004AB41 /* ElectroCardiogramView.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = ElectroCardiogramView.hpp; path = view/ElectroCardiogramView.hpp; sourceTree = SOURCE_ROOT; };
+		4ECAE51C204AD4C9002AF1D1 /* OSCManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OSCManager.hpp; sourceTree = "<group>"; };
+		4ECAE51D204AD4C9002AF1D1 /* MacroManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MacroManager.hpp; sourceTree = "<group>"; };
+		4ECAE51E204AD4C9002AF1D1 /* FontManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FontManager.hpp; sourceTree = "<group>"; };
+		4ECAE51F204AD4C9002AF1D1 /* OSCManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OSCManager.cpp; sourceTree = "<group>"; };
+		4ECAE520204AD4C9002AF1D1 /* MacroManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MacroManager.cpp; sourceTree = "<group>"; };
+		4ECAE521204AD4C9002AF1D1 /* FontManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FontManager.cpp; sourceTree = "<group>"; };
+		4ECAE523204AD4C9002AF1D1 /* CardiogramBackgroundView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CardiogramBackgroundView.cpp; sourceTree = "<group>"; };
+		4ECAE524204AD4C9002AF1D1 /* LogViewModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LogViewModule.cpp; sourceTree = "<group>"; };
+		4ECAE525204AD4C9002AF1D1 /* ElectroCardiogramView.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ElectroCardiogramView.hpp; sourceTree = "<group>"; };
+		4ECAE526204AD4C9002AF1D1 /* ElectroCardiogramView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ElectroCardiogramView.cpp; sourceTree = "<group>"; };
+		4ECAE528204AD4C9002AF1D1 /* CardiogramBackgroundView.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CardiogramBackgroundView.hpp; sourceTree = "<group>"; };
+		4ECAE529204AD4C9002AF1D1 /* LogViewModule.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LogViewModule.hpp; sourceTree = "<group>"; };
+		4ECAE52B204AD4C9002AF1D1 /* HeartRate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HeartRate.cpp; sourceTree = "<group>"; };
+		4ECAE52C204AD4C9002AF1D1 /* HeartRate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HeartRate.hpp; sourceTree = "<group>"; };
 		54CA7A768EDCEA9A38698A34 /* hb-blob.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = "hb-blob.h"; path = "../../../addons/ofxTrueTypeFontUL2/libs/harfbuzz/include/hb-blob.h"; sourceTree = SOURCE_ROOT; };
 		55BD51B6DCED3B3535B3462E /* hb-buffer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = "hb-buffer.h"; path = "../../../addons/ofxTrueTypeFontUL2/libs/harfbuzz/include/hb-buffer.h"; sourceTree = SOURCE_ROOT; };
 		5EA64DFDEC9274FEAFD6324D /* hb-ot-layout.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = "hb-ot-layout.h"; path = "../../../addons/ofxTrueTypeFontUL2/libs/harfbuzz/include/hb-ot-layout.h"; sourceTree = SOURCE_ROOT; };
 		63A47AC60FFAFC3BF093EC0F /* OscOutboundPacketStream.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OscOutboundPacketStream.cpp; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscOutboundPacketStream.cpp; sourceTree = SOURCE_ROOT; };
 		65EEFA3DA3526E9CDD9C21F9 /* ofxOscBundle.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscBundle.cpp; path = ../../../addons/ofxOsc/src/ofxOscBundle.cpp; sourceTree = SOURCE_ROOT; };
+		67DBED026597C0EE427F0379 /* ofxPostGlitch.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxPostGlitch.h; path = ../../../addons/ofxPostGlitch/src/ofxPostGlitch.h; sourceTree = SOURCE_ROOT; };
 		6B65E6930994CC4B2D2B8B33 /* OscPacketListener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscPacketListener.h; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscPacketListener.h; sourceTree = SOURCE_ROOT; };
 		7689F8A0F3D0B7635A8C3104 /* ofxOscArg.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscArg.h; path = ../../../addons/ofxOsc/src/ofxOscArg.h; sourceTree = SOURCE_ROOT; };
-		7A5EB1B6F04EE1663C90B8D6 /* OSCManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OSCManager.cpp; path = manager/OSCManager.cpp; sourceTree = SOURCE_ROOT; };
 		81967292BFC87A0144BD32C6 /* ofxOscSender.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscSender.cpp; path = ../../../addons/ofxOsc/src/ofxOscSender.cpp; sourceTree = SOURCE_ROOT; };
+		8356FDBD1C3D03523229C075 /* ofxSuperLog.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSuperLog.h; path = ../../../addons/ofxSuperLog/src/ofxSuperLog.h; sourceTree = SOURCE_ROOT; };
 		8B30E93FD3D3475EED522A0E /* ofxOscBundle.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscBundle.h; path = ../../../addons/ofxOsc/src/ofxOscBundle.h; sourceTree = SOURCE_ROOT; };
 		8C75AFC8774A62495DD53464 /* ofxOscReceiver.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscReceiver.h; path = ../../../addons/ofxOsc/src/ofxOscReceiver.h; sourceTree = SOURCE_ROOT; };
-		8F7470CF66F0EF3070C31191 /* FontManager.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = FontManager.hpp; path = manager/FontManager.hpp; sourceTree = SOURCE_ROOT; };
-		929DBAAC1D2697E61C5768BE /* OSCManager.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OSCManager.hpp; path = manager/OSCManager.hpp; sourceTree = SOURCE_ROOT; };
 		93991A6DC64AFE1ABC43CF66 /* hb-deprecated.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = "hb-deprecated.h"; path = "../../../addons/ofxTrueTypeFontUL2/libs/harfbuzz/include/hb-deprecated.h"; sourceTree = SOURCE_ROOT; };
-		95127D5191B4A86C5D719C2F /* MacroManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = MacroManager.cpp; path = manager/MacroManager.cpp; sourceTree = SOURCE_ROOT; };
+		9AD6A4FBCEEE86DE950D287F /* ofxSuperLogDisplay.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxSuperLogDisplay.cpp; path = ../../../addons/ofxSuperLog/src/ofxSuperLogDisplay.cpp; sourceTree = SOURCE_ROOT; };
 		9BF3AA0D4FAA89D0F8A0E545 /* OscReceivedElements.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OscReceivedElements.cpp; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscReceivedElements.cpp; sourceTree = SOURCE_ROOT; };
 		9F7986DC4EB05E75FCE2C777 /* ofxOscSender.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscSender.h; path = ../../../addons/ofxOsc/src/ofxOscSender.h; sourceTree = SOURCE_ROOT; };
 		A2AAA8CA403479E6FCDF920E /* OscHostEndianness.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscHostEndianness.h; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscHostEndianness.h; sourceTree = SOURCE_ROOT; };
@@ -111,9 +120,9 @@
 		ADD194746185E2DA11468377 /* IpEndpointName.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = IpEndpointName.cpp; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/IpEndpointName.cpp; sourceTree = SOURCE_ROOT; };
 		AE335EB4709BFD4671EEAC84 /* MessageMappingOscPacketListener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MessageMappingOscPacketListener.h; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/MessageMappingOscPacketListener.h; sourceTree = SOURCE_ROOT; };
 		B31C608870ECEB2490A93736 /* ofxOscParameterSync.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscParameterSync.h; path = ../../../addons/ofxOsc/src/ofxOscParameterSync.h; sourceTree = SOURCE_ROOT; };
-		B33ABB33CA242BDD6CD8E5F1 /* MacroManager.hpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = MacroManager.hpp; path = manager/MacroManager.hpp; sourceTree = SOURCE_ROOT; };
 		B8F1A2DAEB44F57E9E86E21A /* hb-face.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = "hb-face.h"; path = "../../../addons/ofxTrueTypeFontUL2/libs/harfbuzz/include/hb-face.h"; sourceTree = SOURCE_ROOT; };
 		BC8881B3C8C0A1C45F042E7A /* OscPrintReceivedElements.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = OscPrintReceivedElements.cpp; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscPrintReceivedElements.cpp; sourceTree = SOURCE_ROOT; };
+		C0D7BFAFC52551BAB93FAAFF /* ofxSuperLog.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxSuperLog.cpp; path = ../../../addons/ofxSuperLog/src/ofxSuperLog.cpp; sourceTree = SOURCE_ROOT; };
 		C2FAC65C491D4231379F3298 /* ofxOscReceiver.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxOscReceiver.cpp; path = ../../../addons/ofxOsc/src/ofxOscReceiver.cpp; sourceTree = SOURCE_ROOT; };
 		C58862C6D212C8E8A83810F4 /* ofxOscMessage.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxOscMessage.h; path = ../../../addons/ofxOsc/src/ofxOscMessage.h; sourceTree = SOURCE_ROOT; };
 		C6937888E126BADC8777423B /* OscTypes.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscTypes.h; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscTypes.h; sourceTree = SOURCE_ROOT; };
@@ -156,23 +165,6 @@
 				F6F986533CF4AF214C8AA421 /* libs */,
 			);
 			name = ofxTrueTypeFontUL2;
-			sourceTree = "<group>";
-		};
-		25AA657A2049017F003AA72C /* ofxPostGlitch */ = {
-			isa = PBXGroup;
-			children = (
-				25AA657B204901BB003AA72C /* src */,
-			);
-			name = ofxPostGlitch;
-			sourceTree = "<group>";
-		};
-		25AA657B204901BB003AA72C /* src */ = {
-			isa = PBXGroup;
-			children = (
-				25AA658020490232003AA72C /* ofxPostGlitch.cpp */,
-				25AA658120490232003AA72C /* ofxPostGlitch.h */,
-			);
-			name = src;
 			sourceTree = "<group>";
 		};
 		30CB364908817057B430D528 /* osc */ = {
@@ -226,38 +218,48 @@
 			name = libs;
 			sourceTree = "<group>";
 		};
-		4E6D5E582047E6D40063B38A /* view */ = {
+		4ECAE51B204AD4C9002AF1D1 /* manager */ = {
 			isa = PBXGroup;
 			children = (
-				4EEC98492047E6180004AB41 /* ElectroCardiogramView.cpp */,
-				4EEC984A2047E6180004AB41 /* ElectroCardiogramView.hpp */,
-				4EA16087204A90C900150D22 /* CardiogramBackgroundView.cpp */,
-				4EA16088204A90C900150D22 /* CardiogramBackgroundView.hpp */,
-			);
-			path = view;
-			sourceTree = SOURCE_ROOT;
-		};
-		4EEC98462047E5560004AB41 /* manager */ = {
-			isa = PBXGroup;
-			children = (
-				929DBAAC1D2697E61C5768BE /* OSCManager.hpp */,
-				B33ABB33CA242BDD6CD8E5F1 /* MacroManager.hpp */,
-				8F7470CF66F0EF3070C31191 /* FontManager.hpp */,
-				7A5EB1B6F04EE1663C90B8D6 /* OSCManager.cpp */,
-				95127D5191B4A86C5D719C2F /* MacroManager.cpp */,
-				391D24D5CA9373019FCB1F2C /* FontManager.cpp */,
+				4ECAE51C204AD4C9002AF1D1 /* OSCManager.hpp */,
+				4ECAE51D204AD4C9002AF1D1 /* MacroManager.hpp */,
+				4ECAE51E204AD4C9002AF1D1 /* FontManager.hpp */,
+				4ECAE51F204AD4C9002AF1D1 /* OSCManager.cpp */,
+				4ECAE520204AD4C9002AF1D1 /* MacroManager.cpp */,
+				4ECAE521204AD4C9002AF1D1 /* FontManager.cpp */,
 			);
 			path = manager;
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
 		};
-		4EEC98472047E5EA0004AB41 /* model */ = {
+		4ECAE522204AD4C9002AF1D1 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				4EEC98422047DFC30004AB41 /* HeartRate.cpp */,
-				4EEC98432047DFC30004AB41 /* HeartRate.hpp */,
+				4ECAE534204ADC6A002AF1D1 /* module */,
+				4ECAE523204AD4C9002AF1D1 /* CardiogramBackgroundView.cpp */,
+				4ECAE525204AD4C9002AF1D1 /* ElectroCardiogramView.hpp */,
+				4ECAE526204AD4C9002AF1D1 /* ElectroCardiogramView.cpp */,
+				4ECAE528204AD4C9002AF1D1 /* CardiogramBackgroundView.hpp */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		4ECAE52A204AD4C9002AF1D1 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				4ECAE52B204AD4C9002AF1D1 /* HeartRate.cpp */,
+				4ECAE52C204AD4C9002AF1D1 /* HeartRate.hpp */,
 			);
 			path = model;
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
+		};
+		4ECAE534204ADC6A002AF1D1 /* module */ = {
+			isa = PBXGroup;
+			children = (
+				4ECAE524204AD4C9002AF1D1 /* LogViewModule.cpp */,
+				4ECAE529204AD4C9002AF1D1 /* LogViewModule.hpp */,
+			);
+			path = module;
+			sourceTree = "<group>";
 		};
 		641362CA659FAFEE4E81001B /* posix */ = {
 			isa = PBXGroup;
@@ -283,6 +285,15 @@
 			name = oscpack;
 			sourceTree = "<group>";
 		};
+		A15491832FCD72B40A572147 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				67DBED026597C0EE427F0379 /* ofxPostGlitch.h */,
+				40C409F696FE990F95E1B9D3 /* ofxPostGlitch.cpp */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
 		B93B25C4A5FD5D7BA19053D9 /* harfbuzz */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,8 +305,9 @@
 		BB4B014C10F69532006C3DED /* addons */ = {
 			isa = PBXGroup;
 			children = (
-				25AA657A2049017F003AA72C /* ofxPostGlitch */,
 				E6053AB7FEC63D5F83825B88 /* ofxOsc */,
+				D92A719EC4DFB00CB4A3047D /* ofxPostGlitch */,
+				F406950EC19225FF93114E0A /* ofxSuperLog */,
 				08F0DBE627E14F259267379F /* ofxTrueTypeFontUL2 */,
 			);
 			name = addons;
@@ -338,6 +350,14 @@
 			name = src;
 			sourceTree = "<group>";
 		};
+		D92A719EC4DFB00CB4A3047D /* ofxPostGlitch */ = {
+			isa = PBXGroup;
+			children = (
+				A15491832FCD72B40A572147 /* src */,
+			);
+			name = ofxPostGlitch;
+			sourceTree = "<group>";
+		};
 		E4328144138ABC890047C5CB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -362,9 +382,9 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				4E6D5E582047E6D40063B38A /* view */,
-				4EEC98472047E5EA0004AB41 /* model */,
-				4EEC98462047E5560004AB41 /* manager */,
+				4ECAE51B204AD4C9002AF1D1 /* manager */,
+				4ECAE52A204AD4C9002AF1D1 /* model */,
+				4ECAE522204AD4C9002AF1D1 /* view */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
@@ -388,6 +408,25 @@
 				38871A5825686AE018EC2BF0 /* libs */,
 			);
 			name = ofxOsc;
+			sourceTree = "<group>";
+		};
+		F406950EC19225FF93114E0A /* ofxSuperLog */ = {
+			isa = PBXGroup;
+			children = (
+				F66DB433F6042A481044889A /* src */,
+			);
+			name = ofxSuperLog;
+			sourceTree = "<group>";
+		};
+		F66DB433F6042A481044889A /* src */ = {
+			isa = PBXGroup;
+			children = (
+				4376D8726B405E8BDF38549A /* ofxSuperLogDisplay.h */,
+				8356FDBD1C3D03523229C075 /* ofxSuperLog.h */,
+				9AD6A4FBCEEE86DE950D287F /* ofxSuperLogDisplay.cpp */,
+				C0D7BFAFC52551BAB93FAAFF /* ofxSuperLog.cpp */,
+			);
+			name = src;
 			sourceTree = "<group>";
 		};
 		F6F986533CF4AF214C8AA421 /* libs */ = {
@@ -501,25 +540,28 @@
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
-				25AA658220490232003AA72C /* ofxPostGlitch.cpp in Sources */,
-				1320749B8FF5BD6ABE1D5763 /* OSCManager.cpp in Sources */,
-				EBAF3F35ABD0775A0E9F9771 /* MacroManager.cpp in Sources */,
-				7523260FAA0C4B1857427E6E /* FontManager.cpp in Sources */,
+				4ECAE52E204AD4C9002AF1D1 /* MacroManager.cpp in Sources */,
 				4ADB88E2FB52E76A471065DE /* ofxOscParameterSync.cpp in Sources */,
-				4EEC98442047DFC30004AB41 /* HeartRate.cpp in Sources */,
+				4ECAE532204AD4CA002AF1D1 /* ElectroCardiogramView.cpp in Sources */,
 				5864AD82E20F15536D054EA3 /* ofxOscMessage.cpp in Sources */,
 				72A929D3561B8232A182ABFC /* ofxOscBundle.cpp in Sources */,
 				640279EE111671BD026CB013 /* ofxOscReceiver.cpp in Sources */,
 				8F5205AEF8861EF234F0651A /* ofxOscSender.cpp in Sources */,
 				62545D179C94265CA1389D4A /* OscOutboundPacketStream.cpp in Sources */,
-				4EA16089204A90C900150D22 /* CardiogramBackgroundView.cpp in Sources */,
 				879A251454401BC0B6E4F238 /* OscTypes.cpp in Sources */,
 				0546D1A38E13BD319CC9755B /* OscReceivedElements.cpp in Sources */,
 				C4782ECC372420ACE0615B74 /* OscPrintReceivedElements.cpp in Sources */,
 				67FE4C7B15C2F0478C8126C2 /* NetworkingUtils.cpp in Sources */,
-				4EEC984B2047E6180004AB41 /* ElectroCardiogramView.cpp in Sources */,
+				4ECAE533204AD4CA002AF1D1 /* HeartRate.cpp in Sources */,
+				4ECAE530204AD4CA002AF1D1 /* CardiogramBackgroundView.cpp in Sources */,
 				510CAFE035E576A4E1502D52 /* UdpSocket.cpp in Sources */,
 				ADE367465D2A8EBAD4C7A8D9 /* IpEndpointName.cpp in Sources */,
+				F6E7D6C01B3F2E112EB0533D /* ofxPostGlitch.cpp in Sources */,
+				4ECAE531204AD4CA002AF1D1 /* LogViewModule.cpp in Sources */,
+				E65F6DE61327E53A2EA252C8 /* ofxSuperLogDisplay.cpp in Sources */,
+				4ECAE52F204AD4C9002AF1D1 /* FontManager.cpp in Sources */,
+				73B2CB7812D8C0CD20B781C3 /* ofxSuperLog.cpp in Sources */,
+				4ECAE52D204AD4C9002AF1D1 /* OSCManager.cpp in Sources */,
 				F8EE25F765782ABAC54C8E81 /* ofxTrueTypeFontUL2.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,6 +607,8 @@
 					../../../addons/ofxOsc/libs/oscpack/src/ip/win32,
 					../../../addons/ofxOsc/libs/oscpack/src/osc,
 					../../../addons/ofxOsc/src,
+					../../../addons/ofxPostGlitch/src,
+					../../../addons/ofxSuperLog/src,
 					../../../addons/ofxTrueTypeFontUL2/libs,
 					../../../addons/ofxTrueTypeFontUL2/libs/harfbuzz,
 					../../../addons/ofxTrueTypeFontUL2/libs/harfbuzz/include,
@@ -572,7 +616,7 @@
 					../../../addons/ofxTrueTypeFontUL2/libs/harfbuzz/lib/osx,
 					../../../addons/ofxTrueTypeFontUL2/src,
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-D__MACOSX_CORE__",
@@ -618,6 +662,8 @@
 					../../../addons/ofxOsc/libs/oscpack/src/ip/win32,
 					../../../addons/ofxOsc/libs/oscpack/src/osc,
 					../../../addons/ofxOsc/src,
+					../../../addons/ofxPostGlitch/src,
+					../../../addons/ofxSuperLog/src,
 					../../../addons/ofxTrueTypeFontUL2/libs,
 					../../../addons/ofxTrueTypeFontUL2/libs/harfbuzz,
 					../../../addons/ofxTrueTypeFontUL2/libs/harfbuzz/include,
@@ -625,7 +671,7 @@
 					../../../addons/ofxTrueTypeFontUL2/libs/harfbuzz/lib/osx,
 					../../../addons/ofxTrueTypeFontUL2/src,
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_CPLUSPLUSFLAGS = (
 					"-D__MACOSX_CORE__",
 					"-mtune=native",
@@ -664,6 +710,8 @@
 					../../../addons/ofxOsc/libs/oscpack/src/ip/win32,
 					../../../addons/ofxOsc/libs/oscpack/src/osc,
 					../../../addons/ofxOsc/src,
+					../../../addons/ofxPostGlitch/src,
+					../../../addons/ofxSuperLog/src,
 					../../../addons/ofxTrueTypeFontUL2/libs,
 					../../../addons/ofxTrueTypeFontUL2/libs/harfbuzz,
 					../../../addons/ofxTrueTypeFontUL2/libs/harfbuzz/include,
@@ -682,7 +730,6 @@
 					../../../addons/ofxTrueTypeFontUL2/libs/harfbuzz/lib/osx/libharfbuzz.a,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)Debug";
-				SDKROOT = macosx10.11;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -711,6 +758,8 @@
 					../../../addons/ofxOsc/libs/oscpack/src/ip/win32,
 					../../../addons/ofxOsc/libs/oscpack/src/osc,
 					../../../addons/ofxOsc/src,
+					../../../addons/ofxPostGlitch/src,
+					../../../addons/ofxSuperLog/src,
 					../../../addons/ofxTrueTypeFontUL2/libs,
 					../../../addons/ofxTrueTypeFontUL2/libs/harfbuzz,
 					../../../addons/ofxTrueTypeFontUL2/libs/harfbuzz/include,
@@ -729,7 +778,6 @@
 					../../../addons/ofxTrueTypeFontUL2/libs/harfbuzz/lib/osx/libharfbuzz.a,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.11;
 				WRAPPER_EXTENSION = app;
 				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
 			};
