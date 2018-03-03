@@ -6,7 +6,7 @@ This repository contains servers and visualizers.
 ## Visualizer
 https://github.com/RotaPlusPlus/Fitbit_HeartRate_Visualizer/tree/master/oscReceiver
 
-```bash
+```diff
 ├── Makefile
 ├── Project.xcconfig
 ├── bin
@@ -32,9 +32,12 @@ https://github.com/RotaPlusPlus/Fitbit_HeartRate_Visualizer/tree/master/oscRecei
 │   ├── main.cpp
 │   ├── ofApp.cpp
 │   └── ofApp.h
-└── view
-    ├── ElectroCardiogramView.cpp
-    └── ElectroCardiogramView.hpp
+
++└── view
++    ├── CardiogramBackgroundView.cpp
++    ├── CardiogramBackgroundView.hpp
++    ├── ElectroCardiogramView.cpp
++    └── ElectroCardiogramView.hpp
 ```
 
 ## Receiver
