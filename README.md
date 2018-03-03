@@ -19,7 +19,15 @@ https://github.com/RotaPlusPlus/Fitbit_HeartRate_Visualizer/blob/master/sandbox/
 ```bash
 
 $ python osc_sender_sample.py
-
+ip:127.0.0.1, port:8002, address:/data
+[16:40:42]  heart_rate : 91
+[16:40:44]  heart_rate : 93
+[16:40:46]  heart_rate : 86
+[16:40:48]  heart_rate : 89
+[16:40:50]  heart_rate : 89
+[16:40:52]  heart_rate : 87
+[16:40:54]  heart_rate : 94
+[16:40:56]  heart_rate : 97
 ```
 
 then, type some integer.
@@ -32,7 +40,42 @@ https://github.com/RotaPlusPlus/Fitbit_HeartRate_Visualizer/blob/master/receiver
 ```bash
 
 $ python get_heart_rate.py
-
+DATE : 2018-02-26
+CLIENT_ID = XXXXX
+CLIENT_SECRET = XXXXXXXXXX
+ACCESS_TOKEN = XXXXXXXXXX
+REFRESH_TOKEN = XXXXXXXXXX
+ip:127.0.0.1, port:8002, address:/data
+update_time: ['16:55:01']
+=== new updated value ===
+                         time  value
+2018-02-26 16:55:01  16:55:01    115
+update_time: ['16:55:01']
+update_time: ['16:55:01']
+update_time: ['16:55:08']
+=== new updated value ===
+                         time  value
+2018-02-26 16:55:08  16:55:08    115
+update_time: ['16:55:08']
+update_time: ['16:55:08']
+update_time: ['16:55:08']
+update_time: ['16:55:08']
+update_time: ['16:55:08']
+update_time: ['16:55:08']
+update_time: ['16:55:08']
+update_time: ['16:55:08']
+update_time: ['16:55:23']
+=== new updated value ===
+                         time  value
+2018-02-26 16:55:23  16:55:23    115
+update_time: ['16:55:23']
+update_time: ['16:55:23']
+update_time: ['16:55:38']
+=== new updated value ===
+                         time  value
+2018-02-26 16:55:38  16:55:38    115
+update_time: ['16:55:38']
+^CExit with Ctrl+C / sys.exit(0) 
 ```
 
 Automatically, the heart rate acquired from fitbit as time series data is transmitted by OSC
