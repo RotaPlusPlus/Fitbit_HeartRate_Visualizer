@@ -4,6 +4,7 @@
 #include "OSCManager.hpp"
 #include "FontManager.hpp"
 #include "ElectroCardiogramView.hpp"
+#include "CardiogramBackgroundView.hpp"
 
 class ofApp : public ofBaseApp{
 
@@ -25,5 +26,6 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 
     ElectroCardiogramView mElectroCardiogramView;
+    CardiogramBackgroundView mCardiogramBackgroundView;
 		
 };

@@ -11,6 +11,7 @@
 		1320749B8FF5BD6ABE1D5763 /* OSCManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7A5EB1B6F04EE1663C90B8D6 /* OSCManager.cpp */; };
 		25AA658220490232003AA72C /* ofxPostGlitch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 25AA658020490232003AA72C /* ofxPostGlitch.cpp */; };
 		4ADB88E2FB52E76A471065DE /* ofxOscParameterSync.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0AED834CE4DEC5260AF302A2 /* ofxOscParameterSync.cpp */; };
+		4EA16089204A90C900150D22 /* CardiogramBackgroundView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4EA16087204A90C900150D22 /* CardiogramBackgroundView.cpp */; };
 		4EEC98442047DFC30004AB41 /* HeartRate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4EEC98422047DFC30004AB41 /* HeartRate.cpp */; };
 		4EEC984B2047E6180004AB41 /* ElectroCardiogramView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4EEC98492047E6180004AB41 /* ElectroCardiogramView.cpp */; };
 		510CAFE035E576A4E1502D52 /* UdpSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E6DEF695B88BA5FAACEAA937 /* UdpSocket.cpp */; };
@@ -82,6 +83,8 @@
 		444657A12E59D0ED86981498 /* TimerListener.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = TimerListener.h; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/TimerListener.h; sourceTree = SOURCE_ROOT; };
 		48974F980F51769171D0B2F5 /* IpEndpointName.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = IpEndpointName.h; path = ../../../addons/ofxOsc/libs/oscpack/src/ip/IpEndpointName.h; sourceTree = SOURCE_ROOT; };
 		4E95FB446A9C9C6F0DE12D75 /* OscPrintReceivedElements.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = OscPrintReceivedElements.h; path = ../../../addons/ofxOsc/libs/oscpack/src/osc/OscPrintReceivedElements.h; sourceTree = SOURCE_ROOT; };
+		4EA16087204A90C900150D22 /* CardiogramBackgroundView.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CardiogramBackgroundView.cpp; sourceTree = "<group>"; };
+		4EA16088204A90C900150D22 /* CardiogramBackgroundView.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CardiogramBackgroundView.hpp; sourceTree = "<group>"; };
 		4EEC98422047DFC30004AB41 /* HeartRate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HeartRate.cpp; sourceTree = "<group>"; };
 		4EEC98432047DFC30004AB41 /* HeartRate.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HeartRate.hpp; sourceTree = "<group>"; };
 		4EEC98492047E6180004AB41 /* ElectroCardiogramView.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = ElectroCardiogramView.cpp; path = view/ElectroCardiogramView.cpp; sourceTree = SOURCE_ROOT; };
@@ -228,6 +231,8 @@
 			children = (
 				4EEC98492047E6180004AB41 /* ElectroCardiogramView.cpp */,
 				4EEC984A2047E6180004AB41 /* ElectroCardiogramView.hpp */,
+				4EA16087204A90C900150D22 /* CardiogramBackgroundView.cpp */,
+				4EA16088204A90C900150D22 /* CardiogramBackgroundView.hpp */,
 			);
 			path = view;
 			sourceTree = SOURCE_ROOT;
@@ -507,6 +512,7 @@
 				640279EE111671BD026CB013 /* ofxOscReceiver.cpp in Sources */,
 				8F5205AEF8861EF234F0651A /* ofxOscSender.cpp in Sources */,
 				62545D179C94265CA1389D4A /* OscOutboundPacketStream.cpp in Sources */,
+				4EA16089204A90C900150D22 /* CardiogramBackgroundView.cpp in Sources */,
 				879A251454401BC0B6E4F238 /* OscTypes.cpp in Sources */,
 				0546D1A38E13BD319CC9755B /* OscReceivedElements.cpp in Sources */,
 				C4782ECC372420ACE0615B74 /* OscPrintReceivedElements.cpp in Sources */,

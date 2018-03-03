@@ -5,21 +5,21 @@ void ofApp::setup(){
     OSCManager::setup();
     FontManager::init();
     HeartRate::init();
-//    ElectroCardiogramView::init();
+    mCardiogramBackgroundView.init();
     mElectroCardiogramView.init();
 }
 
 //--------------------------------------------------------------
 void ofApp::update(){
     OSCManager::update();
-//    ElectroCardiogramView::update();
+    mCardiogramBackgroundView.update();
     mElectroCardiogramView.update();
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
     OSCManager::draw();
-//    ElectroCardiogramView::draw();
+    mCardiogramBackgroundView.draw();
     mElectroCardiogramView.draw();
 }
 
