@@ -20,6 +20,10 @@ public:
     void draw();
     void post_effects();
 
+    ofShader shader;
+    ofFbo fbo;
+    ofFbo maskFbo;
+    bool isRGB;
 };
 
 #endif /* CardiogramBackgroundView_hpp */
