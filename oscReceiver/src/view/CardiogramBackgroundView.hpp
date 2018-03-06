@@ -10,7 +10,6 @@
 
 #include "ofMain.h"
 #include "HeartRate.hpp"
-#include "ofxPostGlitch.h"
 
 class CardiogramBackgroundView{
 public:
@@ -21,8 +20,6 @@ public:
     void draw();
     void post_effects();
 
-    ofxPostGlitch myGlitch;
-    ofFbo myFbo;
 };
 
 #endif /* CardiogramBackgroundView_hpp */
