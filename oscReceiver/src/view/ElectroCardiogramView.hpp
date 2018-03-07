@@ -27,11 +27,6 @@ struct NoiseDataStrip {
 
 class ElectroCardiogramView{
 public:
-
-    // this is for blood animation
-    ofShader bl_shader;
-    ofFbo blood;
-    ofFbo blood_mask;
     
     NoiseDataStrip noiseDataStrip;
     vector <ofVec2f>positions;

@@ -18,12 +18,17 @@ public:
     void init();
     void update();
     void draw();
-    void post_effects();
+//    void post_effects();
+//
+//    ofShader shader;
+//    ofFbo fbo;
+//    ofFbo maskFbo;
+//    bool isRGB;
 
-    ofShader shader;
-    ofFbo fbo;
-    ofFbo maskFbo;
-    bool isRGB;
+    // this is for blood animation
+    ofShader bl_shader;
+    ofFbo blood;
+    ofFbo blood_mask;
 };
 
 #endif /* CardiogramBackgroundView_hpp */

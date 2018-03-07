@@ -34,7 +34,5 @@ void main (void)
         gws = gws + texture2DRect(image,vec2(pos.x+float(mod(float(i),float(blur_w))),pos.y-float(i/blur_w)))*weight*1.3;
         gws = gws + texture2DRect(image,vec2(pos.x-float(mod(float(i),float(blur_w))),pos.y-float(i/blur_w)))*weight*1.3;
     }
-
-
     gl_FragColor.rgba = col+gws;
 }
