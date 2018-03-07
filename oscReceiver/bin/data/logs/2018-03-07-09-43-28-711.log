@@ -1,0 +1,14 @@
+
+
+--------------------------------------- 2018-03-07-09-43-28-711
+[ error ] ofShader: setupShaderFromFile(): couldn't load GL_VERTEX_SHADER shader  from "shaders/shader.vert"
+[ error ] ofShader: setupShaderFromFile(): couldn't load GL_FRAGMENT_SHADER shader  from "shaders/shader.frag"
+[ error ] ofShader: bindDefaults(): trying to link GLSL program, but no shaders created yet
+[ error ] ofShader: linkProgram(): trying to link GLSL program, but no shaders created yet
+[notice ] [09:43:34] heart rate :86
+[notice ] [09:43:36] heart rate :99
+[notice ] [09:43:38] heart rate :97
+[notice ] [09:43:40] heart rate :89
+[notice ] [09:43:42] heart rate :94
+[notice ] [09:43:44] heart rate :99
+[notice ] [09:43:46] heart rate :92
