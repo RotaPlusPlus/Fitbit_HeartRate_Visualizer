@@ -3,6 +3,10 @@
 #include "ofMain.h"
 #include "OSCManager.hpp"
 #include "FontManager.hpp"
+#include "GlitchManager.hpp"
+#include "BackgroundAutoManager.hpp"
+#include "BlendmodeManager.hpp"
+
 #include "ElectroCardiogramView.hpp"
 #include "CardiogramBackgroundView.hpp"
 
@@ -30,6 +34,11 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 
     ElectroCardiogramView mElectroCardiogramView;
-//    CardiogramBackgroundView mCardiogramBackgroundView;
+    CardiogramBackgroundView mCardiogramBackgroundView;
     LogViewModule mLogViewModule;
+
+    BlendmodeManager mBlendmodeManager;
+    GlitchManager mGlitchManager;
+
+    ofFbo mFbo;
 };
