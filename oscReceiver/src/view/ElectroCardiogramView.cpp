@@ -24,6 +24,21 @@ void ElectroCardiogramView::init(){
     tmp_heart_rate2 = 0;
 
     setupWaveform();
+
+    // ===============
+    int w = ofGetWidth();
+    int h = ofGetHeight();
+    bl_shader.load("shaders/blood.vert", "shaders/blood.frag");
+    blood.allocate(w, h, GL_RGBA, 8);
+
+    blood_mask.allocate(w, h, GL_RGBA, 8);
+    blood_mask.begin();
+    {
+        ofClear(0, 0, 0, 255);
+    }
+    blood_mask.end();
+    // ===============
+
 }
 
 void ElectroCardiogramView::update(){
@@ -50,6 +65,23 @@ void ElectroCardiogramView::update(){
 
 void ElectroCardiogramView::draw(){
 
+    // ======================
+
+    blood.begin();
+    //    ofEnableDepthTest();
+    ofEnableAlphaBlending();
+    ofEnableBlendMode(OF_BLENDMODE_ALPHA);
+    bl_shader.begin();
+    bl_shader.setUniform1f("u_time", ofGetElapsedTimef());
+    bl_shader.setUniform2f("u_resolution", ofGetWidth(), ofGetHeight());
+    blood_mask.draw(0, 0);
+    bl_shader.end();
+    blood.end();
+
+    blood.draw(0, 0);
+
+    // ======================
+
     ofSetColor(255);
     ofPushMatrix();
     ofDrawRectangle(frame_margin, frame_margin, frame_width, frame_height1);
@@ -71,6 +103,8 @@ void ElectroCardiogramView::draw(){
 
     ofPopMatrix();
     drawWaveform();
+
+    
 }
 
 //--------------------------------------------------------------
