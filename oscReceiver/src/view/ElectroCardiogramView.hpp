@@ -14,6 +14,7 @@
 #include "HeartRate.hpp"
 #include "BloodGlucoseLevel.hpp"
 #include "NumberViewModule.hpp"
+#include "FontManager.hpp"
 
 struct NoiseDataStrip {
     float data[NOISE_DATA_STRIP_LENGTH];

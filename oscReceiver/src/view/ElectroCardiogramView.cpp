@@ -39,8 +39,8 @@ void ElectroCardiogramView::init(){
     blood_mask.end();
     // ===============
 
-    heartRateView.init(ofVec2f(ofGetWidth()/2,ofGetHeight()/2));
-    bglsView.init(ofVec2f(ofGetWidth()/2,ofGetHeight()));
+    heartRateView.init(ofVec2f(ofGetWidth()/7*5,ofGetHeight()/7*2));
+    bglsView.init(ofVec2f(ofGetWidth()/7*5,ofGetHeight()/7*4));
 }
 
 void ElectroCardiogramView::update(){
@@ -95,7 +95,7 @@ void ElectroCardiogramView::draw(){
 
     for(int i = 0 ; i < positions.size(); i++){
         ofDrawCircle(positions.at(i).x, positions.at(i).y, 5);
-        ofDrawBitmapString(ofToString(HeartRate::heart_rates.at(i)),
+        FontManager::drawBigString(ofToString(HeartRate::heart_rates.at(i)),
                            positions.at(i).x,
                            positions.at(i).y);
     }

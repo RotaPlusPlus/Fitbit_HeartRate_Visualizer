@@ -3,7 +3,7 @@
 
 //========================================================================
 int main( ){
-    ofSetupOpenGL(1024,768,OF_WINDOW);            // <-------- setup the GL context
+    ofSetupOpenGL(1450,768,OF_WINDOW);            // <-------- setup the GL context
 
 //    ofGLFWWindowSettings settings;
 //    settings.glVersionMajor = 2;
