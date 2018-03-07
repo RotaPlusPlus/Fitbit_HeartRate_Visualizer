@@ -15,10 +15,13 @@
 
 class NumberViewModule{
 public:
+    ofVec2f position;
     NumberViewModule(){};
-    void init();
+    void init(ofVec2f pos);
     void update();
-    void draw();
+    void draw3dig(string arg, string name);
+    void draw2dig(string arg, string name);
+    void drawNaN(string arg);
 };
 
 #endif /* NumberViewModule_hpp */

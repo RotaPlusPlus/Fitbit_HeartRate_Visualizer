@@ -1,0 +1,78 @@
+
+
+--------------------------------------- 2018-03-07-10-59-45-050
+[ error ] ofShader: setupShaderFromSource(): GL_VERTEX_SHADER shader failed to compile
+[ error ] ofShader: GL_VERTEX_SHADER shader reports:
+ERROR: 0:1: '' :  version '150' is not supported
+
+[ error ] ofShader: GL_VERTEX_SHADER, offending line 1 :
+	    1	#version 150
+	    2	
+	    3	uniform mat4 modelViewProjectionMatrix;
+
+[ error ] ofShader: setupShaderFromSource(): GL_FRAGMENT_SHADER shader failed to compile
+[ error ] ofShader: GL_FRAGMENT_SHADER shader reports:
+ERROR: 0:1: '' :  version '150' is not supported
+
+[ error ] ofShader: GL_FRAGMENT_SHADER, offending line 1 :
+	    1	#version 150
+	    2	
+	    3	
+
+[ error ] ofShader: checkProgramLinkStatus(): program failed to link
+[ error ] ofShader: ofShader: program reports:
+ERROR: One or more attached shaders not successfully compiled
+
+[notice ] [11:00:08] heart rate :86
+[notice ] [11:00:10] heart rate :99
+[notice ] [11:00:12] heart rate :85
+[notice ] [11:00:14] heart rate :98
+[notice ] [11:00:16] heart rate :96
+[notice ] [11:00:18] heart rate :90
+[notice ] [11:00:20] heart rate :90
+[notice ] [11:00:22] heart rate :86
+[notice ] [11:00:24] heart rate :86
+[notice ] [11:00:26] heart rate :99
+[notice ] [11:00:28] heart rate :89
+[notice ] [11:00:30] heart rate :89
+[notice ] [11:00:32] heart rate :89
+[notice ] [11:00:34] heart rate :94
+[notice ] [11:00:36] heart rate :94
+[notice ] [11:00:38] heart rate :99
+[notice ] [11:00:40] heart rate :85
+[notice ] [11:00:42] heart rate :96
+[notice ] [11:00:44] heart rate :95
+[notice ] [11:00:46] heart rate :99
+[notice ] [11:00:48] heart rate :89
+[notice ] [11:00:50] heart rate :98
+[notice ] [11:00:52] heart rate :94
+[notice ] [11:00:54] heart rate :87
+[notice ] [11:00:56] heart rate :85
+[notice ] [11:00:58] heart rate :97
+[notice ] [11:01:00] heart rate :93
+[notice ] [11:01:02] heart rate :90
+[notice ] [11:01:04] heart rate :96
+[notice ] [11:01:06] heart rate :92
+[notice ] [11:01:08] heart rate :89
+[notice ] [11:01:10] heart rate :94
+[notice ] [11:01:12] heart rate :96
+[notice ] [11:01:14] heart rate :93
+[notice ] [11:01:16] heart rate :90
+[notice ] [11:01:18] heart rate :89
+[notice ] [11:01:20] heart rate :92
+[notice ] [11:01:22] heart rate :88
+[notice ] [11:01:24] heart rate :96
+[notice ] [11:01:26] heart rate :94
+[notice ] [11:01:28] heart rate :97
+[notice ] [11:01:30] heart rate :98
+[notice ] [11:01:32] heart rate :91
+[notice ] [11:01:34] heart rate :99
+[notice ] [11:01:36] heart rate :96
+[notice ] [11:01:38] heart rate :94
+[notice ] [11:01:40] heart rate :85
+[notice ] [11:01:42] heart rate :85
+[notice ] [11:01:44] heart rate :90
+[notice ] [11:01:46] heart rate :91
+[notice ] [11:01:48] heart rate :96
+[notice ] [11:01:50] heart rate :89
+[notice ] [11:01:52] heart rate :91

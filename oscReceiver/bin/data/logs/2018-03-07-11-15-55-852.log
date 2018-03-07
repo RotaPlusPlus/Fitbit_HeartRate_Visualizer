@@ -1,0 +1,30 @@
+
+
+--------------------------------------- 2018-03-07-11-15-55-853
+[ error ] ofShader: setupShaderFromSource(): GL_VERTEX_SHADER shader failed to compile
+[ error ] ofShader: GL_VERTEX_SHADER shader reports:
+ERROR: 0:4: Invalid storage qualifiers 'in' in global variable context
+ERROR: 0:7: Use of undeclared identifier 'position'
+
+[ error ] ofShader: GL_VERTEX_SHADER, offending line 4 :
+	    2	
+	    3	uniform mat4 modelViewProjectionMatrix;
+	    4	in vec4 position;
+	    5	
+	    6	void main() {
+
+[ error ] ofShader: setupShaderFromSource(): GL_FRAGMENT_SHADER shader failed to compile
+[ error ] ofShader: GL_FRAGMENT_SHADER shader reports:
+ERROR: 0:45: Use of undeclared identifier 'outputColor'
+
+[ error ] ofShader: GL_FRAGMENT_SHADER, offending line 45 :
+	   43	    vec2 position = (gl_FragCoord.xy * 2.0 - 1.0) / u_resolution.xy;
+	   44	    float w = getwaves(position);
+	   45	    outputColor = vec4( 1.0 - w*vec4(.88-w*.25,1.2,1.3,0.)*1.5 );
+	   46	//    outputColor = vec4(1.0, 0.0, 0.0, 1.0);
+	   47	}
+
+[ error ] ofShader: checkProgramLinkStatus(): program failed to link
+[ error ] ofShader: ofShader: program reports:
+ERROR: One or more attached shaders not successfully compiled
+

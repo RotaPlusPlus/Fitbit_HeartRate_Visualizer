@@ -8,6 +8,8 @@
 
 #include "LogViewModule.hpp"
 
+#include "BloodGlucoseLevel.hpp"
+
 class ofApp : public ofBaseApp{
 
 	public:
@@ -28,6 +30,6 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
 
     ElectroCardiogramView mElectroCardiogramView;
-    CardiogramBackgroundView mCardiogramBackgroundView;
+//    CardiogramBackgroundView mCardiogramBackgroundView;
     LogViewModule mLogViewModule;
 };

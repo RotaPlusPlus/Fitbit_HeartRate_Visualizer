@@ -1,0 +1,32 @@
+
+
+--------------------------------------- 2018-03-07-11-07-32-690
+[ error ] ofShader: setupShaderFromSource(): GL_VERTEX_SHADER shader failed to compile
+[ error ] ofShader: GL_VERTEX_SHADER shader reports:
+ERROR: 0:1: '' :  version '150' is not supported
+
+[ error ] ofShader: GL_VERTEX_SHADER, offending line 1 :
+	    1	#version 150
+	    2	
+	    3	uniform mat4 modelViewProjectionMatrix;
+
+[ error ] ofShader: setupShaderFromSource(): GL_FRAGMENT_SHADER shader failed to compile
+[ error ] ofShader: GL_FRAGMENT_SHADER shader reports:
+ERROR: 0:1: '' :  version '150' is not supported
+
+[ error ] ofShader: GL_FRAGMENT_SHADER, offending line 1 :
+	    1	#version 150
+	    2	
+	    3	
+
+[ error ] ofShader: checkProgramLinkStatus(): program failed to link
+[ error ] ofShader: ofShader: program reports:
+ERROR: One or more attached shaders not successfully compiled
+
+[notice ] [11:07:45] heart rate :96
+[notice ] [11:07:47] heart rate :91
+[notice ] [11:07:49] heart rate :85
+[notice ] [11:07:51] heart rate :97
+[notice ] [11:07:53] heart rate :98
+[notice ] [11:07:55] heart rate :87
+[notice ] [11:07:57] heart rate :88
