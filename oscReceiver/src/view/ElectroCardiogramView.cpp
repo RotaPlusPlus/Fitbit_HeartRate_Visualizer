@@ -39,6 +39,8 @@ void ElectroCardiogramView::init(){
     blood_mask.end();
     // ===============
 
+    heartRateView.init(ofVec2f(ofGetWidth()/2,ofGetHeight()/2));
+    bglsView.init(ofVec2f(ofGetWidth()/2,ofGetHeight()));
 }
 
 void ElectroCardiogramView::update(){
@@ -66,7 +68,6 @@ void ElectroCardiogramView::update(){
 void ElectroCardiogramView::draw(){
 
     // ======================
-
     blood.begin();
     //    ofEnableDepthTest();
     ofEnableAlphaBlending();
@@ -77,9 +78,7 @@ void ElectroCardiogramView::draw(){
     blood_mask.draw(0, 0);
     bl_shader.end();
     blood.end();
-
     blood.draw(0, 0);
-
     // ======================
 
     ofSetColor(255);
@@ -104,7 +103,25 @@ void ElectroCardiogramView::draw(){
     ofPopMatrix();
     drawWaveform();
 
-    
+    if(HeartRate::heart_rates.size() > 0){
+        if(HeartRate::heart_rates.back()>=100){
+            heartRateView.draw3dig(ofToString(HeartRate::heart_rates.back()));
+        }else{
+            heartRateView.draw2dig(ofToString(HeartRate::heart_rates.back()));
+        }
+    }else{
+        heartRateView.drawNaN("NaN");
+    }
+
+    if(BloodGlucoseLevel::bgls.back()>0){
+        if(BloodGlucoseLevel::bgls.back()>=100){
+            bglsView.draw3dig(ofToString(BloodGlucoseLevel::bgls.back()));
+        }else{
+            bglsView.draw2dig(ofToString(BloodGlucoseLevel::bgls.back()));
+        }
+    }else{
+        bglsView.drawNaN("NaN");
+    }
 }
 
 //--------------------------------------------------------------

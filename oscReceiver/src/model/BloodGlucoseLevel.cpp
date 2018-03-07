@@ -16,5 +16,9 @@ void BloodGlucoseLevel::init(){
 }
 
 void BloodGlucoseLevel::update(){
-
+    // 1000msに一回値更新
+    if(int(ofGetElapsedTimeMillis())%1000 < 10){
+        BloodGlucoseLevel::bgls.push_back(ofRandom(MacroManager::bgls_min,MacroManager::bgls_max));
+        BloodGlucoseLevel::bgls.erase(BloodGlucoseLevel::bgls.begin());
+    }
 }
