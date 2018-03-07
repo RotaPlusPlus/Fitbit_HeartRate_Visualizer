@@ -39,6 +39,8 @@ void ElectroCardiogramView::init(){
     blood_mask.end();
     // ===============
 
+    heartRateView.init(ofVec2f(ofGetWidth()/7*5,ofGetHeight()*0.3));
+    bglsView.init(ofVec2f(ofGetWidth()/7*5,ofGetHeight()/7*4));
 }
 
 void ElectroCardiogramView::update(){
@@ -58,7 +60,7 @@ void ElectroCardiogramView::update(){
 
     // Update Cardigogram Elements Position
     for(int i = 0 ; i < positions.size(); i++){
-        positions.at(i) = ofVec2f(ofMap(i, 0, MacroManager::max_buffer_size, frame_margin*2,ofGetWidth()-frame_margin*3),
+        positions.at(i) = ofVec2f(ofMap(i, 0, MacroManager::max_buffer_size, frame_margin*2,ofGetWidth()-frame_margin*10),
                                   ofMap(HeartRate::heart_rates.at(i), MacroManager::heart_rate_max, MacroManager::heart_rate_min, frame_margin*2, frame_height1-frame_margin));
     }
 }
@@ -66,7 +68,6 @@ void ElectroCardiogramView::update(){
 void ElectroCardiogramView::draw(){
 
     // ======================
-
     blood.begin();
     //    ofEnableDepthTest();
     ofEnableAlphaBlending();
@@ -77,13 +78,13 @@ void ElectroCardiogramView::draw(){
     blood_mask.draw(0, 0);
     bl_shader.end();
     blood.end();
-
     blood.draw(0, 0);
-
     // ======================
 
     ofSetColor(255);
     ofPushMatrix();
+
+    FontManager::drawBigString("Change in Heartbeat",frame_margin, frame_margin-5);
     ofDrawRectangle(frame_margin, frame_margin, frame_width, frame_height1);
 
     ofBeginShape();
@@ -95,8 +96,8 @@ void ElectroCardiogramView::draw(){
 
 
     for(int i = 0 ; i < positions.size(); i++){
-        ofDrawCircle(positions.at(i).x, positions.at(i).y, 5);
-        ofDrawBitmapString(ofToString(HeartRate::heart_rates.at(i)),
+        ofDrawCircle(positions.at(i).x, positions.at(i).y, 2);
+        FontManager::drawBigString(ofToString(HeartRate::heart_rates.at(i)),
                            positions.at(i).x,
                            positions.at(i).y);
     }
@@ -104,7 +105,25 @@ void ElectroCardiogramView::draw(){
     ofPopMatrix();
     drawWaveform();
 
-    
+    if(HeartRate::heart_rates.size() > 0){
+        if(HeartRate::heart_rates.back()>=100){
+            heartRateView.draw3dig(ofToString(HeartRate::heart_rates.back()),"Heart Beats");
+        }else{
+            heartRateView.draw2dig(ofToString(HeartRate::heart_rates.back()), "Heart Beats");
+        }
+    }else{
+        heartRateView.drawNaN("NaN");
+    }
+
+    if(BloodGlucoseLevel::bgls.back()>0){
+        if(BloodGlucoseLevel::bgls.back()>=100){
+            bglsView.draw3dig(ofToString(BloodGlucoseLevel::bgls.back()), "Blood Glucose Level");
+        }else{
+            bglsView.draw2dig(ofToString(BloodGlucoseLevel::bgls.back()), "Blood Glucose Level");
+        }
+    }else{
+        bglsView.drawNaN("NaN");
+    }
 }
 
 //--------------------------------------------------------------
@@ -208,6 +227,7 @@ void ElectroCardiogramView::drawNoise (float x, float y, float width, float heig
     // 外枠を描く
     ofDisableSmoothing();
     ofNoFill();
+    FontManager::drawBigString("Electro Cardiogram",0, -5);
     ofDrawRectangle(0,0, width, height+100);
 
     ofPopMatrix();

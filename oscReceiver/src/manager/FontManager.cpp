@@ -15,10 +15,10 @@ ofxTrueTypeFontUL2 FontManager::guifont;
 void FontManager::init(){
     setlocale(LC_CTYPE,"");
     if(mfont.isLoaded())return;
-    FontManager::loadFont("font/smartfont.otf", 100);
-    FontManager::loadSmallFont("font/digital_counter_7_italic.ttf", 12);
+    FontManager::loadFont("font/smartfont.otf", 90);
+    FontManager::loadSmallFont("font/smartfont.otf", 10);
     FontManager::loadBigFont("font/smartfont.otf", 22);
-    FontManager::loadGuiFont("font/smartfont.otf", 10);
+    FontManager::loadGuiFont("font/smartfont.otf", 72);
 }
 
 void FontManager::loadGuiFont(const string &arg,const int &size){
@@ -29,6 +29,8 @@ void FontManager::drawGuiString(const string &arg ,const float &x,const float &y
     guifont.drawString(arg, x, y);
 }
 
+
+
 void FontManager::loadFont(const string &arg,const int &size){
     mfont.loadFont(arg, size);
 }
@@ -36,6 +38,8 @@ void FontManager::loadFont(const string &arg,const int &size){
 void FontManager::drawString(const string &arg ,const float &x,const float &y){
     mfont.drawString(arg, x, y);
 }
+
+
 
 void FontManager::loadSmallFont(const string &arg,const int &size){
     msmallfont.loadFont(arg, size);
@@ -51,6 +55,8 @@ void FontManager::drawSmallWString(const wstring &arg ,const float &x,const floa
 void FontManager::drawSmallString(const string &arg ,const float &x,const float &y){
     msmallfont.drawString(arg, x, y);
 }
+
+
 
 void FontManager::loadBigFont(const string &arg,const int &size){
     mbigfont.loadFont(arg, size);

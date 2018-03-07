@@ -12,6 +12,9 @@
 
 #include "ofMain.h"
 #include "HeartRate.hpp"
+#include "BloodGlucoseLevel.hpp"
+#include "NumberViewModule.hpp"
+#include "FontManager.hpp"
 
 struct NoiseDataStrip {
     float data[NOISE_DATA_STRIP_LENGTH];
@@ -29,10 +32,11 @@ public:
     ofShader bl_shader;
     ofFbo blood;
     ofFbo blood_mask;
-
     
     NoiseDataStrip noiseDataStrip;
     vector <ofVec2f>positions;
+
+    NumberViewModule heartRateView, bglsView;
 
     ElectroCardiogramView(){};
     void init();

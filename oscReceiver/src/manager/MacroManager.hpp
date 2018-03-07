@@ -24,9 +24,6 @@ namespace MacroManager {
     const int num_of_bgls = 100;
     const int bgls_max = 195;
     const int bgls_min = 150;
-
-    const std::string higashiome_gothicfont_path = "font/HigashiOme-Gothic.ttf";
-    const std::string helveticafont_path = "font/HelveticaNeueLTStd-Md.ttf";
 }
 
 #endif /* MacroManager_hpp */
