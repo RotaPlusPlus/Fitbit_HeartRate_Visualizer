@@ -19,7 +19,7 @@ public:
     void update();
     void draw();
     void post_effects();
-
+    
     ofShader shader;
     ofFbo fbo;
     ofFbo maskFbo;

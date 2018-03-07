@@ -20,6 +20,10 @@ public:
     void update();
     void draw();
 
+    // this is for blood animation
+    ofShader bl_shader;
+    ofFbo blood;
+    ofFbo blood_mask;
 };
 
 #endif /* ElectroCardiogramView_hpp */
