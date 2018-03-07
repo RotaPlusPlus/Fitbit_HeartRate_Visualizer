@@ -1,0 +1,7 @@
+
+
+--------------------------------------- 2018-03-07-09-46-09-593
+[ error ] ofShader: setupShaderFromFile(): couldn't load GL_VERTEX_SHADER shader  from "shaders/shader.vert"
+[ error ] ofShader: setupShaderFromFile(): couldn't load GL_FRAGMENT_SHADER shader  from "shaders/shader.frag"
+[ error ] ofShader: bindDefaults(): trying to link GLSL program, but no shaders created yet
+[ error ] ofShader: linkProgram(): trying to link GLSL program, but no shaders created yet
