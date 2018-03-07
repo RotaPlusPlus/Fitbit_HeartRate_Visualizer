@@ -21,7 +21,7 @@ void NumberViewModule::draw3dig(string arg, string name){
     ofTranslate(position);
     ofDrawCircle(-50, -50, 100);
     FontManager::drawString(ofToString(arg),-147,-5);
-    FontManager::drawSmallString(name,-128,+28);
+    FontManager::drawSmallString(name,-118,+25);
     ofPopMatrix();
 }
 
@@ -30,7 +30,7 @@ void NumberViewModule::draw2dig(string arg, string name){
     ofTranslate(position);
     ofDrawCircle(-50, -50, 100);
     FontManager::drawString(ofToString(arg),-128,-7);
-    FontManager::drawSmallString(name,-128,+28);
+    FontManager::drawSmallString(name,-90,+25);
     ofPopMatrix();
 }
 
