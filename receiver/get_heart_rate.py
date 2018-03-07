@@ -31,8 +31,8 @@ ACCESS_TOKEN = ""
 REFRESH_TOKEN = ""
 
 # 取得したい日付(今日に設定) e.g. "2018-02-26"
-DATE = datetime.datetime.now().strftime( '%Y-%m-%d' )
-DATE = "2018-02-26"
+DATE = datetime.datetime.now().strftime( '%Y-%m-%d' ) 
+DATE = "2018-02-27"
 print(DATE)
 
 # Ctrl+Cで終了時の処理
@@ -141,9 +141,9 @@ def task(authd_client, osc_client, start_time="16:15", end_time="16:40"):
 # updated_time = time.asctime().split(" ")[3]
 def get_updated_time():
     now = datetime.datetime.now()
-    updated_now = now + datetime.timedelta(minutes=-60)
+    updated_now = now + datetime.timedelta(minutes=-30)
     updated_time = updated_now.strftime('%H:%M:%S')
-    old_now = now + datetime.timedelta(minutes=-75)
+    old_now = now + datetime.timedelta(minutes=-60)
     old_time = old_now.strftime('%H:%M:%S')
     return old_time, updated_time
 
@@ -166,6 +166,6 @@ if __name__ == '__main__':
     # main loop
     while True:
         old_time, updated_time = get_updated_time()
-        task(fitbit_client, osc_client, old_time, updated_time)
-        # task(fitbit_client, osc_client)
+        #task(fitbit_client, osc_client, old_time, updated_time)
+        task(fitbit_client, osc_client)
         time.sleep(1)
