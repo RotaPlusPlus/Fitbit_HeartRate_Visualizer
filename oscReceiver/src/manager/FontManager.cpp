@@ -16,7 +16,7 @@ void FontManager::init(){
     setlocale(LC_CTYPE,"");
     if(mfont.isLoaded())return;
     FontManager::loadFont("font/smartfont.otf", 90);
-    FontManager::loadSmallFont("font/digital_counter_7_italic.ttf", 60);
+    FontManager::loadSmallFont("font/smartfont.otf", 10);
     FontManager::loadBigFont("font/smartfont.otf", 22);
     FontManager::loadGuiFont("font/smartfont.otf", 72);
 }

@@ -19,8 +19,8 @@ public:
     NumberViewModule(){};
     void init(ofVec2f pos);
     void update();
-    void draw3dig(string arg);
-    void draw2dig(string arg);
+    void draw3dig(string arg, string name);
+    void draw2dig(string arg, string name);
     void drawNaN(string arg);
 };
 

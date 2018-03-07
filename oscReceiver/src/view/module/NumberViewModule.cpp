@@ -16,19 +16,21 @@ void NumberViewModule::update(){
     
 }
 
-void NumberViewModule::draw3dig(string arg){
+void NumberViewModule::draw3dig(string arg, string name){
     ofPushMatrix();
     ofTranslate(position);
     ofDrawCircle(-50, -50, 100);
-    FontManager::drawString(ofToString(arg),-145,-7);
+    FontManager::drawString(ofToString(arg),-147,-5);
+    FontManager::drawSmallString(name,-128,+28);
     ofPopMatrix();
 }
 
-void NumberViewModule::draw2dig(string arg){
+void NumberViewModule::draw2dig(string arg, string name){
     ofPushMatrix();
     ofTranslate(position);
     ofDrawCircle(-50, -50, 100);
     FontManager::drawString(ofToString(arg),-128,-7);
+    FontManager::drawSmallString(name,-128,+28);
     ofPopMatrix();
 }
 
